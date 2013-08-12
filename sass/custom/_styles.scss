@@ -18,7 +18,7 @@ body {
 		background: $white;
 		text-align: center;
 		padding-left: 0px;
-		padding-right: 0px;	
+		padding-right: 0px;
 
 		h1 {
 			a, a:visited, a:hover {
@@ -91,7 +91,7 @@ body {
 			> article, > section {
 				padding-left: 0px;
 				padding-right: 0px;
-			}	
+			}
 		}
 	}
 }
@@ -102,7 +102,8 @@ article {
 	.entry-content {
 		h3 {
 			font-style: italic
-		}
+    }
+    //text-align: justify;
 	}
 
 	ul, ol {
@@ -124,12 +125,12 @@ article {
 #content {
 	div.pagination {
 		background: none repeat scroll 0 0 transparent;
-		margin: 0 10px;  
+		margin: 0 10px;
 		font-size: 0.95em;
 		padding-bottom: 1.5em;
 		margin-top: 4em;
 		position: relative;
-		text-align: center;		
+		text-align: center;
 		border-top: dotted 1px #D1D1D1;
 		border-bottom: dotted 1px #D1D1D1;
 	}
@@ -140,7 +141,7 @@ article {
 
 			header {
 				padding-left: 0;
-  				padding-right: 0;
+  			padding-right: 0;
 			}
 		}
 
@@ -163,12 +164,12 @@ article {
 			font-size: 2.2em;
 		}
 	}
-	
+
 }
 
 figure.code {
 	.highlight {
-		background: #212C3B !important;
+		background: $base03 !important;
 
 		.gutter {
 			display: none;
@@ -177,7 +178,7 @@ figure.code {
 }
 
 .pre-code, html .gist .gist-file .gist-syntax .highlight pre, .highlight code {
-	background: #212C3B !important;
+	background: $base03 !important;
 }
 
 aside {

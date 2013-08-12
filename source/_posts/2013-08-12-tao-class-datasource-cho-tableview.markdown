@@ -157,14 +157,15 @@ Bạn thấy đấy giờ trong ViewController thì phần code cho dataSource c
 
 Tiếp theo còn một đoạn `...` tại phần tạo cell mới khi mà không tìm thấy cell có thể dùng lại. Như bạn thấy đấy để tạo cell mới chúng ta cần biết Class của cell. Với Objective-C chúng ta có thể tạo 1 instance từ tên class. Khi đó chúng ta có thể tạo 1 cell như sau:
 
-`
-cell = [[NSClassFromString(CELL_CLASS_NAME) alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:self.cellIdentifier];
-`
+{% codeblock lang:objc %}
+cell = [[NSClassFromString(CELL_CLASS_NAME) alloc] initWithStyle:UITableViewCellStyleDefault
+                                                 reuseIdentifier:self.cellIdentifier];
+{% endcodeblock %}
 
 Như vậy class TVArrayDataSource chỉ cần có thêm thông tin là tên class của cell là mọi việc có thể hoàn tất. Ngoài ra nhiều khi chúng ta muốn tạo cell từ file Xib. Để tạo cell từ file xib chúng ta cũng chỉ cần biết thêm tên file xib. Thế nên mình tạo thêm một property `cellName` để lưu tên class của cell hoặc tên file Xib tuỳ theo trường hợp cell tạo từ file xib hay từ code.
 Như vậy việc tạo class TVArrayDatasource đã hoàn thành. Và bây giờ trong ViewController chúng ta chỉ implement đoạn code ngắn như sau:
 Khi sử dụng với block
-{% codeblock ViewController.m %}
+{% codeblock  block - ViewController.m https://github.com/nghialv/TVDataSource/blob/master/sample/TVDataSource/Classes/Controller/TVBlockViewController.m github %}
 // tạo block
 TVCellConfigureBlock configureCell = ^(CELL_CLASS_NAME *cell, DATATYPE *name) {
   [cell.title setText:name];
