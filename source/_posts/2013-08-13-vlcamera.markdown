@@ -3,6 +3,7 @@ layout: post
 title: "vlcamera"
 date: 2013-08-13 11:29
 comments: true
+isProject: true
 categories: [project, ios]
 ---
 

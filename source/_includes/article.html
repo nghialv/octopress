@@ -28,6 +28,7 @@
   <div class="entry-content">{{ content }}</div>
 {% endif %}
 
+{% if isProject %}
 <div id="myCarousel" class="carousel slide" style="width: 320px;">
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -50,3 +51,4 @@
   <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
   <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
+{% endif %}
