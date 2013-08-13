@@ -5,6 +5,7 @@ date: 2013-08-13 11:29
 comments: true
 isProject: true
 postId: "vlcameraapp"
+photosNum: 6
 categories: [project, ios]
 ---
 

@@ -3,11 +3,13 @@ layout: default
 single: true
 ---
 
-{% assign isProject = page.isProject %}
-
 <div>
 <article class="hentry" role="article">
-  {% include article.html %}
+  {% if page.isProject %}
+    {% include project.html %}
+  {% else %}
+    {% include article.html %}
+  {% endif %}
   <footer>
     <p class="meta">
       {% include post/author.html %}

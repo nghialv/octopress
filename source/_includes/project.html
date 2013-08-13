@@ -1,0 +1,50 @@
+{% unless page.no_header %}
+  <header>
+    {% if index %}
+      <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
+    {% else %}
+      <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+    {% endif %}
+    {% unless page.meta == false %}
+      <p class="meta">
+        {% include post/date.html %}{{ time }}
+        {% if site.disqus_short_name and page.comments != false and post.comments != false and site.disqus_show_comment_count == true %}
+         | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread" class="article-comments">Comments</a>
+        {% endif %}
+      </p>
+    {% endunless %}
+  </header>
+{% endunless %}
+
+{% if index %}
+  {% assign me = post %}
+{% else %}
+  {% assign me = page %}
+{% endif %}
+
+<div class="entry-content">{{ content }}</div>
+
+{% assign myid = me.postId %}
+
+<div id={{ myid }} class="carousel slide screenshot-carousel" style="width: 320px;">
+  <ol class="carousel-indicators">
+    <li data-target="#{{ myid }}" data-slide-to="0" class="active"></li>
+    <li data-target="#{{ myid }}" data-slide-to="1"></li>
+    <li data-target="#{{ myid }}" data-slide-to="2"></li>
+  </ol>
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">
+      <img src="/images/{{ myid }}/1.png" style="border: 1px solid #ddd;">
+    </div>
+    <div class="item">
+      <img src="/images/{{ myid }}/2.png" style="border: 1px solid #ddd;">
+    </div>
+    <div class="item">
+      <img src="/images/{{ myid }}/3.png" style="border: 1px solid #ddd;">
+    </div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#{{ myid }}" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#{{ myid }}" data-slide="next">&rsaquo;</a>
+</div>
