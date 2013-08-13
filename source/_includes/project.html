@@ -1,3 +1,9 @@
+{% if index %}
+  {% assign me = post %}
+{% else %}
+  {% assign me = page %}
+{% endif %}
+
 {% unless page.no_header %}
   <header>
     {% if index %}
@@ -16,16 +22,24 @@
   </header>
 {% endunless %}
 
-{% if index %}
-  {% assign me = post %}
-{% else %}
-  {% assign me = page %}
-{% endif %}
+{% assign myid = me.postId %}
 
 <div class"content-part">
-<div class="entry-content project-entry-content">{{ content }}</div>
-
-{% assign myid = me.postId %}
+<div class="project-entry-content">
+  <div class="app-icon-name">
+    <img src="/images/{{ myid }}/{{ me.appIcon }}" class="my-img app-icon">
+    <p class="app-name">{{ me.appName }}</p>
+  </div>
+  <div class="entry-content app-description">{{ content }} </div>
+  <div class="app-market">
+    <a href="#" class="market-icon">
+      <img src="/images/viewdemo-icon.png" class="my-img">
+    </a>
+    <a href="#" class="market-icon">
+      <img src="/images/applestore-icon.png" class="my-img">
+    </a>
+  </div>
+</div>
 
 <div id={{ myid }} class="carousel slide screenshot-carousel">
   <ol class="carousel-indicators">

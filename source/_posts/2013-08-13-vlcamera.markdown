@@ -4,7 +4,10 @@ title: "vlcamera app"
 date: 2013-08-13 11:29
 comments: true
 isProject: true
+appName: "vlcamera"
+appIcon: "icon.png"
 postId: "vlcameraapp"
+avaiableOnAppStore: false
 screenshotsNum: 6
 categories: [project, ios]
 ---
