@@ -3,7 +3,7 @@ layout: post
 title: "Tạo class datasource cho TableView"
 date: 2013-08-12 18:16
 comments: true
-categories: [iOS, tableview]
+categories: [ios, tableview]
 ---
 
 
