@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "vlcamera"
+title: "vlcamera app"
 date: 2013-08-13 11:29
 comments: true
 isProject: true
+postId: "vlcameraapp"
 categories: [project, ios]
 ---
 
