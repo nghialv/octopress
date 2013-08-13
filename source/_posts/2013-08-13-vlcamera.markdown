@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "vlcamera app"
+title: "vlcamera"
 date: 2013-08-13 11:29
 comments: true
 isProject: true
 appName: "vlcamera"
 appIcon: "icon.png"
 postId: "vlcameraapp"
-appStoreUrl: "#"
-demoUrl: "#"
+//appStoreUrl: "#"
+//demoUrl: "#"
 screenshotsNum: 6
 categories: [project, ios]
 ---
