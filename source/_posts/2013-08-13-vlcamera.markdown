@@ -7,7 +7,8 @@ isProject: true
 appName: "vlcamera"
 appIcon: "icon.png"
 postId: "vlcameraapp"
-avaiableOnAppStore: false
+appStoreUrl: "#"
+demoUrl: "#"
 screenshotsNum: 6
 categories: [project, ios]
 ---

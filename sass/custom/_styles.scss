@@ -99,6 +99,7 @@ body {
 
 article {
 	padding-top: 2em;
+  margin-bottom: 20px;
 
 	.entry-content {
 		h3 {
@@ -216,9 +217,11 @@ input {
 .app-name {
   font-weight: 900;
   font-size: 48px;
-  font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-  color: rgb(44, 62, 80);
   line-height: 90px;
+}
+
+.app-name a:hover {
+  text-decoration: none !important;
 }
 
 .app-description {
@@ -233,6 +236,7 @@ input {
   height: 100%;
   text-decoration: none;
   white-space: nowrap;
+  margin-right: 10px;
 }
 
 .market-icon:hover {
@@ -251,6 +255,7 @@ input {
   width: 320px;
   float: right;
   margin-right: 0px;
+  margin-top: -150px;
 }
 
 .screenshot-img {
@@ -267,4 +272,23 @@ input {
 
 .carousel-control.left {
   left: -65px;
+}
+
+.carousel-indicators {
+  right: 110px !important;
+  bottom: -25px !important;
+  top: auto !important;
+}
+
+.carousel-indicators li {
+  background-color: #AAAAAA;
+}
+
+.carousel-indicators.active {
+  background-color: #66CCFF !important;
+}
+
+//project-header
+.project-header {
+  background: none;
 }

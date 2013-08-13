@@ -4,39 +4,42 @@
   {% assign me = page %}
 {% endif %}
 
+{% assign myid = me.postId %}
+
 {% unless page.no_header %}
-  <header>
-    {% if index %}
-      <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
-    {% else %}
-      <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
-    {% endif %}
+  <header class="project-header">
+    <div class="app-icon-name">
+      <img src="/images/{{ myid }}/{{ me.appIcon }}" class="my-img app-icon">
+      <h1 class="entry-title app-name"><a href="{{ root_url }}{{ post.url }}">{{ me.appName }}</a></h1>
+    </div>
     {% unless page.meta == false %}
-      <p class="meta">
-        {% include post/date.html %}{{ time }}
-        {% if site.disqus_short_name and page.comments != false and post.comments != false and site.disqus_show_comment_count == true %}
-         | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread" class="article-comments">Comments</a>
+    <p class="meta">
+      {% include post/date.html %}{{ time }}
+      {% if site.disqus_short_name and page.comments != false and post.comments != false and site.disqus_show_comment_count == true %} | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread" class="article-comments">Comments</a>
         {% endif %}
-      </p>
+    </p>
     {% endunless %}
   </header>
 {% endunless %}
 
-{% assign myid = me.postId %}
-
 <div class"content-part">
 <div class="project-entry-content">
-  <div class="app-icon-name">
-    <img src="/images/{{ myid }}/{{ me.appIcon }}" class="my-img app-icon">
-    <p class="app-name">{{ me.appName }}</p>
-  </div>
+
   <div class="entry-content app-description">{{ content }} </div>
   <div class="app-market">
-    <a href="#" class="market-icon">
+    <a href="{{ me.demoUrl }}" class="market-icon">
+      {% if me.demoUrl %}
       <img src="/images/viewdemo-icon.png" class="my-img">
+      {% else %}
+      <img src="/images/viewdemo-icon.png" class="my-img" style="opacity: 0.25;">
+      {% endif %}
     </a>
-    <a href="#" class="market-icon">
+    <a href="{{ me.appStoreUrl }}" class="market-icon">
+      {% if me.appStoreUrl %}
       <img src="/images/applestore-icon.png" class="my-img">
+      {% else %}
+      <img src="/images/applestore-icon.png" class="my-img" style="opacity: 0.25;">
+      {% endif %}
     </a>
   </div>
 </div>
