@@ -195,3 +195,17 @@ input {
   text-transform: none !important;
   text-decoration: none !important;
 }
+
+.project-entry-content {
+  float: left;
+  min-width: 50%;
+}
+
+.screenshot-carousel {
+  width: 320px;
+  float: right;
+}
+
+.screenshot-img {
+  border: 1px solid #ddd;
+}

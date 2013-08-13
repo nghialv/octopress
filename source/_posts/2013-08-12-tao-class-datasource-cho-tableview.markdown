@@ -4,7 +4,6 @@ title: "Tạo class datasource cho TableView"
 date: 2013-08-12 18:16
 comments: true
 isProject: false
-postId: "taoclassdatasourcechotableview"
 categories: [ios, tableview]
 ---
 

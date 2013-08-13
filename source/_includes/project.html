@@ -22,29 +22,36 @@
   {% assign me = page %}
 {% endif %}
 
-<div class="entry-content">{{ content }}</div>
+<div class"content-part">
+<div class="entry-content project-entry-content">{{ content }}</div>
 
 {% assign myid = me.postId %}
 
-<div id={{ myid }} class="carousel slide screenshot-carousel" style="width: 320px;">
+<div id={{ myid }} class="carousel slide screenshot-carousel">
   <ol class="carousel-indicators">
-    <li data-target="#{{ myid }}" data-slide-to="0" class="active"></li>
-    <li data-target="#{{ myid }}" data-slide-to="1"></li>
-    <li data-target="#{{ myid }}" data-slide-to="2"></li>
+    {% for i in (0..me.screenshotsNum) %}
+      {% if i == 0 %}
+        <li data-target="#{{ myid }}" data-slide-to={{i}} class="active"></li>
+      {% else %}
+        <li data-target="#{{ myid }}" data-slide-to="{{i}}"></li>
+      {% endif %}
+    {% endfor %}
   </ol>
   <!-- Carousel items -->
   <div class="carousel-inner">
-    <div class="active item">
-      <img src="/images/{{ myid }}/1.png" style="border: 1px solid #ddd;">
+    {% for i in (0..me.screenshotsNum) %}
+      {% if i == 0 %}
+        <div class="active item">
+      {% else %}
+        <div class="item">
+      {% endif %}
+      <img src="/images/{{ myid }}/{{i}}.png" class="screenshot-img">
     </div>
-    <div class="item">
-      <img src="/images/{{ myid }}/2.png" style="border: 1px solid #ddd;">
-    </div>
-    <div class="item">
-      <img src="/images/{{ myid }}/3.png" style="border: 1px solid #ddd;">
-    </div>
+    {% endfor %}
   </div>
   <!-- Carousel nav -->
   <a class="carousel-control left" href="#{{ myid }}" data-slide="prev">&lsaquo;</a>
   <a class="carousel-control right" href="#{{ myid }}" data-slide="next">&rsaquo;</a>
 </div>
+</div>
+<div style="clear:both;"></div>
