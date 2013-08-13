@@ -204,8 +204,21 @@ input {
 .screenshot-carousel {
   width: 320px;
   float: right;
+  margin-right: 65px;
 }
 
 .screenshot-img {
   border: 1px solid #ddd;
+}
+
+.carousel-control {
+  top: 50%;
+}
+
+.carousel-control.right {
+  right: -65px;
+}
+
+.carousel-control.left {
+  left: -65px;
 }
