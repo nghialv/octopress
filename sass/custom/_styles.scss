@@ -187,6 +187,24 @@ aside {
 	display: none;
 }
 
+
+// overide h1
+.vn-title {
+  font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif !important;
+  font-weight: bold !important;
+}
+
+.vn-title a {
+  font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif !important;
+  font-weight: bold !important;
+}
+
+.entry-content h1 {
+  font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif !important;
+  font-weight: normal !important;
+  font-size: 1.8em !important;
+}
+
 // override bootstrap
 input {
   margin-bottom: 0 !important;
@@ -215,7 +233,6 @@ input {
 }
 
 .app-name {
-  font-weight: 900;
   font-size: 48px;
   line-height: 90px;
 }
