@@ -292,7 +292,8 @@ input {
 }
 
 .carousel-indicators {
-  right: 110px !important;
+  display: none !important;
+  right: 0px !important;
   bottom: -25px !important;
   top: auto !important;
 }

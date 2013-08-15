@@ -9,7 +9,7 @@ appIcon: "icon.png"
 postId: "vlcameraapp"
 //appStoreUrl: "#"
 //demoUrl: "#"
-screenshotsNum: 6
+screenshotsNum: 11
 categories: [project, ios]
 ---
 
