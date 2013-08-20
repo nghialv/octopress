@@ -7,7 +7,7 @@ isProject: true
 appName: "vlcamera"
 appIcon: "icon.png"
 postId: "vlcameraapp"
-//appStoreUrl: "#"
+appStoreUrl: "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=687063069&mt=8"
 //demoUrl: "#"
 screenshotsNum: 11
 categories: [project, ios]
