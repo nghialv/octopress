@@ -1,0 +1,42 @@
+---
+layout: post
+title: "sslide"
+date: 2013-11-06 10:00
+comments: true
+isProject: true
+appName: "sslide"
+appIcon: "icon.png"
+postId: "sslideapp"
+appStoreUrl: "https://itunes.apple.com/us/app/sslide/id730948724?ls=1&mt=8"
+//demoUrl: "#"
+screenshotsNum: 10
+categories: [project, ios]
+---
+
+
+### Description
+"-- Welcome to a new world of presentations --"
+
+SSlide is a presentation tool that will make your presentations more interactive.
+
+
+FEATURES
+
++ Integrating with SlideShare
+  * Browse your slides on SlideShare
+  * Download slides for offline viewing
+  * Browse your favourite slides at top page (you can add or remove the tags)
+  * Search slides by keyword with three options: relevance, most viewed, latest
+
++ Presentation
+  * Streaming
+    * establish streaming for the subscribing from other devices
+    * subscribe to a streaming channel (established by other device or web)
+    * synchronize your slide page
+    * synchronize your drawing on each page
+  * Send the questions to the presenter directly on your device
+  * Take the notes in your slide
+
++ Super cool interface
+
+keywords: slideshare, slide, presentation, streaming
